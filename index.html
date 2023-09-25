@@ -1,61 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error - Page Not Found</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        .container {
-            width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f2f2f2;
+        .error-container {
+            text-align: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
         }
-        .form-group {
-            margin-bottom: 15px;
+        h1 {
+            font-size: 72px;
+            color: #333;
+            margin: 0;
         }
-        label {
+        p {
+            font-size: 24px;
+            color: #555;
+            margin-top: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
             font-weight: bold;
         }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
+        .header {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
-        input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 3px;
-            cursor: pointer;
+        .subheader {
+            font-size: 30px;
+            color: #007BFF;
+            margin-top: 20px;
         }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        li a {
+            color: #007BFF;
+            text-decoration: underline;
+        }
+        li a:hover {
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="login.php" method="post"> <!-- Replace 'login.php' with your server-side login script -->
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required value="admin">
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required value="admin123">
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login">
-            </div>
-        </form>
+    <div class="header">
+        <h1>404 Error</h1>
+    </div>
+    <div class="error-container">
+        <h1>Oops! Page Not Found</h1>
+        <p>The page you are looking for may have been moved or does not exist.</p>
+        <p>Please check the URL or return to <a href="/">home</a>.</p>
+        <div class="subheader">You can also explore:</div>
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
     </div>
 </body>
 </html>
